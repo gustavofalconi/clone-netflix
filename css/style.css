@@ -1,11 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
     height: 809px;
     width: 100%;
-    background-image: url(../img/banner\ 1.png);
     position: absolute;
     background-size: 100% 809px;
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.fundo__destaque{
+    height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9) 5%,
+      rgba(0, 0, 0, 0.2) 20%,
+      rgba(0, 0, 0, 0.2) 80%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../img/banner\ 1.png);
+    background-size: cover;
+    padding: 0.26rem 0.75rem 0 0.75rem;
+}
+
+header{
+    width: 95%;
+    margin: 0 auto;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacao{
+    width: 33vw;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.logo{
+    height: 3vh;
+    width: 7vw;
+}
+
+.nav__links{
+    width: 25vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link__nav{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav__icones{
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav__icones-botao{
+    background-color: rgb(0, 0, 0, 0.0);
+    border: none;
+    color: white;
+}
+
+.nav__icones-perfil{
+    display: flex;
+    align-items: center;
+    width: 5vw;
+    justify-content: space-between;
+}
+
+.nav__icones-perfil::after{
+    content: "\25BC";
+    font-size: 1rem;
 }
 
 .destaque__conteudo {
@@ -45,17 +121,21 @@ body {
     height: 40px;
     font-weight: bold;
     font-size: 0.9rem;
+    text-align: center;
+    transition: 0.5s;
 }
 
-.botao__destaque-assistir i::before{
-   content: "\25B6";
-   margin-right: 10px;
+.botao__destaque:hover{
+    color: #000000;
+    background-color: rgb(255, 255, 255);
 }
 
-.botao__destaque-info i::before{
-    content: "ⓘ";
+.fa-play{
     margin-right: 10px;
+}
 
+.fa-circle-info{
+    margin-right: 10px
 }
 
 .botao__destaque-assistir{
