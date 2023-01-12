@@ -3,10 +3,10 @@
 }
 
 body {
-    height: 809px;
     width: 100%;
     position: absolute;
     background-size: 100% 809px;
+    background-color: #000000;
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -35,19 +35,19 @@ header{
 }
 
 .navegacao{
-    width: 33vw;
+    width: 30rem;
     display: flex;
     align-items: center;
     justify-content:space-between;
 }
 
 .logo{
-    height: 3vh;
+    height: 4vh;
     width: 7vw;
 }
 
 .nav__links{
-    width: 25vw;
+    width: 40rem;
     display: flex;
     justify-content: space-evenly;
 }
@@ -60,7 +60,7 @@ header{
 }
 
 .nav__icones{
-    width: 12vw;
+    width: 9rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -75,7 +75,7 @@ header{
 .nav__icones-perfil{
     display: flex;
     align-items: center;
-    width: 5vw;
+    width: 4rem;
     justify-content: space-between;
 }
 
@@ -84,10 +84,14 @@ header{
     font-size: 1rem;
 }
 
-.destaque__conteudo {
-    margin-top: 150px;
+.destaque{
+    margin-top: 10vh;
     margin-left: 50px;
-    width: 500px;
+}
+
+.destaque__conteudo {
+    width: 35vw;
+    height: 20%;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-areas:
@@ -99,51 +103,99 @@ header{
 }
 
 .poster__destaque {
-    height: 200px;
-    width: 500px;
+    height: 24vh;
+    width: 35vw;
     grid-area: poster__destaque;
     grid-column: span 2;
 }
 
 .descricao__destaque {
     color: white;
-    max-width: 500px;
-    font-size: 1.3rem;
+    font-size: 1.2vw;
+    line-height: 1.25;
     grid-area: descricao__destaque;
     grid-column: span 2;
 }
 
 .botao__destaque{
-    background-color: rgb(145, 134, 134, 0.3);
     border: none;
-    border-radius: 5px;
-    color: white;
-    height: 40px;
+    padding: 0.8rem 1.9rem;
+    border-radius: 0.125rem;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 100%;
     text-align: center;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
-.botao__destaque:hover{
-    color: #000000;
-    background-color: rgb(255, 255, 255);
+button{
+    cursor: pointer;
+}
+
+.botao__destaque-assistir:hover{
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+.botao__destaque-info:hover{
+    background-color: rgb(145, 134, 134, 0.3);
 }
 
 .fa-play{
-    margin-right: 10px;
+    margin-right: 0.5rem;
 }
 
 .fa-circle-info{
-    margin-right: 10px
+    margin-right: 0.5rem;
 }
 
 .botao__destaque-assistir{
     width: 150px;
     grid-area: botao__destaque-assistir;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
 }
 
 .botao__destaque-info{
     width: 220px;
     grid-area: botao__destaque-info;
+    background-color: rgb(145, 134, 134, 0.5);
+    color: white;
+}
+
+.catalogo{
+    margin-top: 12rem;
+}
+
+.lista__filmes{
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.8rem;
+}
+
+.lista__filmes .primeira-lista{
+    margin-top: 12rem;
+}
+
+.lista__filmes-titulo{
+    grid-column: span 5;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.lista__filmes-video{
+    transition: 0.8s;
+    transition: 0.4s;
+}
+
+.lista__filmes-video:hover{
+    transform: scale(1.12);
+    /* border: 2px solid rgb(255, 0, 0, 0.5); */
+}
+
+.imagem__video{
+    width: 100%;
+    height: 100%;
 }
